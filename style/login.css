@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: calc(100% - 478px);
+    background-image: url("drawable/loginBackground.jpg");
+    background-repeat: none;
+}
+#containerLogin {
+    width: 200px;
+    height: 150px;
+    margin: 200px auto;
+    padding: 35px;
+    padding-right: 50px;
+    border: 4px black solid;
+    border-radius: 5px;
+    background-color: rgb(246, 191, 89);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    background-color: rgb(31, 31, 31);
+    color: rgb(246, 191, 89);
+    border: 4px rgb(179, 116, 0) solid;
+    border-radius: 5px;
+}
