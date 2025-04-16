@@ -3,8 +3,9 @@ html, body {
     padding: 0;
     width: 100%;
     height: calc(100% - 478px);
-    background-image: url("drawable/loginBackground.jpg");
-    background-repeat: none;
+    background-image: url("drawable/loginBackground3.jpg");
+    background-repeat: no-repeat;
+    
 }
 #containerLogin {
     width: 200px;
