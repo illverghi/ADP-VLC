@@ -14,6 +14,7 @@ if ($dbConn) {
 
     // La query da eseguire
     $querySql = "SELECT * FROM Utenti WHERE Username = '" . $username . "' AND Password = '" . $password . "'";
+
     // Eseguo la query
     $queryRes = mysqli_query($dbConn, $querySql);
 
@@ -32,10 +33,10 @@ if ($dbConn) {
 
             // Ridireziono l'utente verso questa pagina.
             header("Location: private.php");
+        } else {
+            header("Location: index.php?err=1");
         }
-        else {
-            
-        }
+        
     }
     else {
         echo "Errore nella query: " . mysqli_error($dbConn);
