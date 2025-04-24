@@ -15,7 +15,7 @@ html, body {
     left: 0;
     padding: 10px;
 }
-#containerLogin {
+#containerRegistration {
     padding-top: 15px;
     width: 300px;
     margin: 200px auto;
@@ -64,11 +64,6 @@ input[type="submit"], .register-button {
     text-decoration: none;
 }
 
-.submit-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
 
 input[type="submit"]:hover, .register-button:hover {
     background-color: rgb(189, 85, 6);
