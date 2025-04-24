@@ -9,11 +9,11 @@ $dbConn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 // Verifico la connessione al DB
 if ($dbConn) {
     // Prendiamo le variabili POST dal form inviato
-    $username = htmlentities($_POST["Username"]);
-    $password = md5($_POST["Password"]);
+    $username = htmlentities($_POST["username"]);
+    $password = md5($_POST["password"]);
 
     // La query da eseguire
-    $querySql = "SELECT * FROM Utenti WHERE Username = '" . $username . "' AND Password = '" . $password . "'";
+    $querySql = "SELECT * FROM utenti WHERE username = '" . $username . "' AND password = '" . $password . "'";
 
     // Eseguo la query
     $queryRes = mysqli_query($dbConn, $querySql);
@@ -28,8 +28,8 @@ if ($dbConn) {
             session_start();
 
             // Memorizzo i dati nelle variabili di sessione.
-            $_SESSION["UtenteID"] = $row["ID"];
-            $_SESSION["UtenteUsername"] = $row["Username"];
+            $_SESSION["UtenteID"] = $row["id"];
+            $_SESSION["UtenteUsername"] = $row["username"];
 
             // Ridireziono l'utente verso questa pagina.
             header("Location: private.php");

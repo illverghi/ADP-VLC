@@ -64,7 +64,6 @@ input[type="submit"], .register-button {
     text-decoration: none;
 }
 
-
 input[type="submit"]:hover, .register-button:hover {
     background-color: rgb(189, 85, 6);
     color: #fff;

@@ -30,7 +30,7 @@ if ($dbConn) {
             $_SESSION["UtenteUsername"] = $row["username"];
 
             // Ridireziono l'utente verso questa pagina.
-            header("Location: private.php");
+            header("Location: index.php");        
     }
     else {
         echo "Errore nella query: " . mysqli_error($dbConn);
