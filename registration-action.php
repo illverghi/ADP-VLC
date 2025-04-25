@@ -13,10 +13,17 @@ if ($dbConn) {
     $cognome = htmlentities($_POST["cognome"]);
     $username = htmlentities($_POST["username"]);
     $password = md5($_POST["password"]);
-
+    $queryUsername = "SELECT * FROM utenti WHERE username = '" . $username . "'";
+    $queryResUsername = mysqli_query($dbConn, $queryUsername);
     // La query da eseguire
-    $querySql = "INSERT INTO utenti (nome, cognome, username, password) VALUES ('" . $nome . "', '" . $cognome . "', '" . $username . "', '" . $password . "')";
+    if (mysqli_num_rows($queryResUsername) > 0) {
+        
 
+        header("Location: registration.php?err=1");
+        exit;
+    }
+    $querySql = "INSERT INTO utenti (nome, cognome, username, password) VALUES ('" . $nome . "', '" . $cognome . "', '" . $username . "', '" . $password . "')";
+    
     // Eseguo la query
     $queryRes = mysqli_query($dbConn, $querySql);
 
