@@ -14,14 +14,16 @@ if ($dbConn) {
     $queryNome = "SELECT * FROM azienda WHERE nome = '" . $nome . "'";
     $queryResNome = mysqli_query($dbConn, $queryNome);
     // La query da eseguire
-    if (mysqli_num_rows($queryResNome) > 0) {
+    if (mysqli_num_rows($queryResNome) === 1) {
         
 
         header("Location: company-creation.php?err=1");
         exit;
     }
-    $querySql = "INSERT INTO azienda (nome, password) 
-                 VALUES ('" . $nome . "', '" . $password . "')";
+    session_start();
+    $ownerID = $_SESSION["UtenteID"];
+    $querySql = "INSERT INTO azienda (nome, password, ownerID) 
+                 VALUES ('" . $nome . "', '" . $password . "', '" . $ownerID . "')";
     
     // Eseguo la query
     $queryRes = mysqli_query($dbConn, $querySql);
