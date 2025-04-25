@@ -40,5 +40,39 @@
             event.preventDefault();
             alert("Tutti i campi devono essere compilati.");
         }
+        if (password.length < 8) {
+            event.preventDefault();
+            alert("La password deve essere lunga almeno 8 caratteri.");
+        }
+        if (!/^[a-zA-Z0-9]+$/.test(username)) {
+            event.preventDefault();
+            alert("Lo username può contenere solo lettere e numeri.");
+        }
+        if (username.length < 3 || username.length > 50) {
+            event.preventDefault();
+            alert("Lo username deve essere lungo tra 3 e 20 caratteri.");
+        }
+        if (nome.length < 3 || nome.length > 50) {
+            event.preventDefault();
+            alert("Il nome deve essere lungo tra 3 e 50 caratteri.");
+        }
+        if (cognome.length < 3 || cognome.length > 50) {
+            event.preventDefault();
+            alert("Il cognome deve essere lungo tra 3 e 50 caratteri.");
+        }
+        if (!/^[a-zA-Z0-9]+$/.test(nome)) {
+            event.preventDefault();
+            alert("Il nome può contenere solo lettere e numeri.");
+        }
+        if (!/^[a-zA-Z0-9]+$/.test(cognome)) {
+            event.preventDefault();
+            alert("Il cognome può contenere solo lettere e numeri.");
+        }
+        if (!/^[a-zA-Z0-9]+$/.test(password)) {
+            event.preventDefault();
+            alert("La password può contenere solo lettere e numeri.");
+        }
     });
+
+
 </script>
