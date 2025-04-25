@@ -11,7 +11,7 @@ if ($dbConn) {
     // Prendiamo le variabili POST dal form inviato
     $nome = htmlentities($_POST["nome"]);
     $password = md5($_POST["password"]);
-    $queryNome = "SELECT * FROM aziende WHERE nome = '" . $nome . "'";
+    $queryNome = "SELECT * FROM azienda WHERE nome = '" . $nome . "'";
     $queryResNome = mysqli_query($dbConn, $queryNome);
     // La query da eseguire
     if (mysqli_num_rows($queryResNome) > 0) {
@@ -20,7 +20,8 @@ if ($dbConn) {
         header("Location: company-creation.php?err=1");
         exit;
     }
-    $querySql = "INSERT INTO aziende (nome, password) VALUES ('" . $nome . "', '" . $password . "')";
+    $querySql = "INSERT INTO azienda (nome, password) 
+                 VALUES ('" . $nome . "', '" . $password . "')";
     
     // Eseguo la query
     $queryRes = mysqli_query($dbConn, $querySql);
@@ -35,7 +36,7 @@ if ($dbConn) {
             $_SESSION["ownerID"] = $row["ownerID"];
 
             // Ridireziono l'utente verso questa pagina.
-            header("Location: index.php");        
+            header("Location: private.php");        
     }
     else {
         echo "Errore nella query: " . mysqli_error($dbConn);
