@@ -50,7 +50,7 @@
         }
         if (username.length < 3 || username.length > 50) {
             event.preventDefault();
-            alert("Lo username deve essere lungo tra 3 e 20 caratteri.");
+            alert("Lo username deve essere lungo tra 3 e 50 caratteri.");
         }
         if (nome.length < 3 || nome.length > 50) {
             event.preventDefault();
