@@ -13,7 +13,7 @@
 
     <body>
         <div id="containerLogo">
-            <img src="/ADP-VLC/style/drawable/logoBeeEfficient(1).png" alt="Logo" class="logo" style="width: 300px; height: auto;">
+            <img src="style/drawable/logoBeeEfficient(1).png" alt="Logo" class="logo" style="width: 300px; height: auto;">
         </div>
         <div id="containerLogin">
             <form method="POST" action="company-login-action.php">

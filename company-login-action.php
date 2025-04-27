@@ -29,6 +29,7 @@ if ($dbConn) {
 
             // Memorizzo i dati nelle variabili di sessione.
             $_SESSION["codice"] = $row["codice"];
+            $_SESSION["nome"] = $row["nome"];
            
             // Ridireziono l'utente verso questa pagina.
             header("Location: company-private.php");
