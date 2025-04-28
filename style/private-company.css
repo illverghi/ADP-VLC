@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("drawable/background_Login(1).png");
+    background-image: url("drawable/background_Login.png");
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ a{
 }
 
 #employeeTable tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.28;
 }
 
 #employeeTable tr:hover {

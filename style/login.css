@@ -22,7 +22,7 @@ html, body {
     border: 1px solid rgb(242, 149, 12);
     border-radius: 5px;
     background-color: rgb(189, 85, 6);
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;

@@ -26,7 +26,7 @@
                 <img src="/ADP-VLC/style/drawable/logoBeeEfficient(2).png" alt="Logo" width="80" height="30">
             </div>
             |
-            <a href="">
+            <a href="/ADP-VLC/add-employer.php">
                 <div class="toolbar-item">
                     Aggiungi Dipendente
                 </div>
@@ -38,43 +38,61 @@
                 </div>
             </a>
             
+            
         </div>
     </header>
     <div id="containerCompanyName">
         <h1><?php echo $_SESSION["nome"] ?></h1>
     </div>
-    <table id="employeeTable">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Cognome</th>
-                <th>Codice Fiscale</th>
-                <th>Data di Nascita</th>
-                <th>Data di Assunzione</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                $query = "SELECT * FROM dipendenti WHERE codAzienda = $_SESSION[codice]";
-                $stmt = $conn->prepare($query);
-                $stmt->bind_param("s", $_SESSION["codice"]);
-                $stmt->execute();
-                $result = $stmt->get_result();
+    <table id="employeeTable"cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Codice Fiscale</th>
+            <th>Data di Nascita</th>
+            <th>Data di Assunzione</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        
+        $dbConn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . htmlspecialchars($row['nome'], ENT_QUOTES, 'UTF-8') . "</td>";
-                    echo "<td>" . htmlspecialchars($row['cognome'], ENT_QUOTES, 'UTF-8') . "</td>";
-                    echo "<td>" . htmlspecialchars($row['codFiscale'], ENT_QUOTES, 'UTF-8') . "</td>";
-                    echo "<td>" . htmlspecialchars($row['dataNascita'], ENT_QUOTES, 'UTF-8') . "</td>";
-                    echo "<td>" . htmlspecialchars($row['dataAssunzione'], ENT_QUOTES, 'UTF-8') . "</td>";
-                    echo "</tr>";
+        // Verifico la connessione
+        if ($dbConn) {
+            // Creo la query
+            $querySql = "SELECT nome, cognome, codFiscale, nascita, assunzione FROM dipendenti WHERE codAzienda = '" . $_SESSION["codice"] . "'";
+
+            $queryRes = mysqli_query($dbConn, $querySql);
+
+            if ($queryRes) {
+                if (mysqli_num_rows($queryRes) > 0) {
+                    // Stampo le righe della tabella
+                    while ($row = mysqli_fetch_assoc($queryRes)) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['cognome']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['codFiscale']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['nascita']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['assunzione']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Nessun risultato trovato.</td></tr>";
                 }
+            } else {
+                echo "<tr><td colspan='5'>Errore nella query: " . htmlspecialchars(mysqli_error($dbConn)) . "</td></tr>";
+            }
 
-                $stmt->close();
-            ?>
-        </tbody>
+            // Chiudo la connessione
+            mysqli_close($dbConn);
+        } else {
+            echo "<tr><td colspan='5'>Errore nella connessione al DB.</td></tr>";
+        }
+        ?>
+    </tbody>
+</table>
 
-    </table>
 </body>
 </html>
