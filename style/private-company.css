@@ -89,7 +89,7 @@ a{
 }
 
 #employeeTable tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.28;
+    background-color: rgba(0, 0, 0, 0.28);
 }
 
 #employeeTable tr:hover {

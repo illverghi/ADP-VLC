@@ -52,6 +52,7 @@
             <th>Codice Fiscale</th>
             <th>Data di Nascita</th>
             <th>Data di Assunzione</th>
+            <th>Gestione</th>
         </tr>
     </thead>
     <tbody>
@@ -76,6 +77,7 @@
                         echo "<td>" . htmlspecialchars($row['codFiscale']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['nascita']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['assunzione']) . "</td>";
+                        echo "<td><button onclick=\"\">Gestisci</button></td>";
                         echo "</tr>";
                     }
                 } else {
