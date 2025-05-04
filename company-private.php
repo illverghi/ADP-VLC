@@ -77,7 +77,10 @@
                         echo "<td>" . htmlspecialchars($row['codFiscale']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['nascita']) . "</td>";
                         echo "<td>" . htmlspecialchars($row['assunzione']) . "</td>";
-                        echo "<td><button onclick=\"\">Gestisci</button></td>";
+                        echo "<td><form method='post' action='employee.php' style='margin:0;'>
+                                <input type='hidden' name='codFiscale' value='" . htmlspecialchars($row['codFiscale'], ENT_QUOTES, 'UTF-8') . "'>
+                                <button id='submitButton' type='submit'>Gestisci</button>
+                              </form></td>";
                         echo "</tr>";
                     }
                 } else {

@@ -34,7 +34,8 @@ if ($dbConn) {
             session_start();
 
             // Memorizzo i dati nelle variabili di sessione.
-            $_SESSION["companyID"] = $row["id"];
+            $companyID = mysqli_insert_id($dbConn);
+            $_SESSION["companyID"] = $companyID;
             $_SESSION["ownerID"] = $row["ownerID"];
 
             // Ridireziono l'utente verso questa pagina.

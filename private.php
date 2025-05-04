@@ -8,6 +8,9 @@
     <?php
         include_once "db.php";
         session_start();
+        if (isset($_SESSION["companyID"])) {
+            echo "<script>alert('Registrazione completata! Codice azienda: " . $_SESSION["companyID"] . "');</script>";
+        }
     ?>
 
 
@@ -19,9 +22,12 @@
             <form method="POST" action="company-login-action.php">
                 <label for="codice">Codice Azienda</label> <br>
                 <input name="codice" type="text"> <br><br>
-
                 <label for="password">Password</label> <br>
-                <input name="password" type="password"> <br><br>
+                <div style="position: relative; width: 100%;">
+                    <input type="password" id="password" name="password">
+                    <img id="togglePassword" src="/ADP-VLC/style/drawable/bee_hidden.png" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
+                        width: 24px; height: 24px; cursor: pointer;"></img>
+                </div>
                 <div class="submit-container">
                     <div>
                         <a href="company-creation.php" class="register-button">Crea Azienda</a>
@@ -32,14 +38,14 @@
         </div>
     </body>
 </html>
-
-<?php
-/*
-if (isset($_SESSION['UtenteUsername'])) {
-    $username = htmlspecialchars($_SESSION['UtenteUsername'], ENT_QUOTES, 'UTF-8');
-    echo "<h1>Welcome, $username!</h1>";
-} else {
-    echo "<h1>Username not found in session.</h1>";
-}
-?>*/
+<script>
+document.getElementById("togglePassword").addEventListener("click", function () {
+    const passwordField = document.getElementById("password");
+    const isPassword = passwordField.type === "password";
+    
+    passwordField.type = isPassword ? "text" : "password";
+    this.src = isPassword ? "/ADP-VLC/style/drawable/bee_visible.png" : "/ADP-VLC/style/drawable/bee_hidden.png";
+});
+</script>
+</html>
 
