@@ -3,11 +3,12 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-image: url("drawable/background_Login(1).png");
+    background-image: url("drawable/background_Employee.png");
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Nunito', sans-serif;
 }
 #containerLogo {
     position: absolute;
@@ -59,7 +60,6 @@ input[type="submit"], .register-button {
     margin: 0 5px;
 }
 
-
 .register-button {
     display: inline-block;
     text-decoration: none;
@@ -74,8 +74,4 @@ input[type="submit"], .register-button {
 input[type="submit"]:hover, .register-button:hover {
     background-color: rgb(189, 85, 6);
     color: #fff;
-}
-#togglePassword {
-    transition: 0.3s ease;
-    user-select: none;
 }

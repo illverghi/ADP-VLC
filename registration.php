@@ -23,7 +23,11 @@
                 <input name="username" type="text"> <br><br>
 
                 <label for="password">Password</label> <br>
-                <input name="password" type="password"> <br><br>
+                <div style="position: relative; width: 100%;">
+                    <input type="password" id="password" name="password">
+                    <img id="togglePassword" src="/ADP-VLC/style/drawable/bee_hidden.png" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
+                        width: 24px; height: 24px; cursor: pointer;"></img>
+                </div>
             </div>
             <input type="submit" value="Registrati" class="register-button">
         </form>
@@ -73,6 +77,12 @@
             alert("La password può contenere solo lettere e numeri.");
         }
     });
-
-
+    document.getElementById("togglePassword").addEventListener("click", function () {
+        const passwordField = document.getElementById("password");
+        const isPassword = passwordField.type === "password";
+        
+        passwordField.type = isPassword ? "text" : "password";
+        this.src = isPassword ? "/ADP-VLC/style/drawable/bee_visible.png" : "/ADP-VLC/style/drawable/bee_hidden.png";
+    });
 </script>
+</html>
