@@ -67,5 +67,8 @@
                 echo "Errore nella connessione al DB.";
             }
         ?>
+        <div id="employee-icon">
+            <img src="/ADP-VLC/style/drawable/bee_worker(2).png" alt="beeWorker" width="200" height="200">
+        </div>
     </body>
 </html>

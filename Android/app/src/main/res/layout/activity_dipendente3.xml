@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dipendente1">
+    tools:context=".Dipendente3">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/logo2" />
 
     <ImageButton
-        android:id="@+id/back"
+        android:id="@+id/back3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="268dp"
             android:orientation="horizontal">
 
@@ -65,7 +65,7 @@
                 android:layout_height="105dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="30dp"
-                android:text="Tommaso Lorito"
+                android:text="Vincenzo Consoli"
                 android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -76,12 +76,12 @@
                 android:layout_height="162dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/lavoratore1" />
+                app:srcCompat="@drawable/lavoratore3" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:layout_height="241dp"
             android:orientation="vertical">
 
@@ -90,7 +90,7 @@
                 android:layout_width="400dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="3dp"
-                android:text="Cod. Fiscale: LRTTMS06A04G712G"
+                android:text="Cod. Fiscale: CNSVCN06M13F201I"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -108,7 +108,7 @@
                 android:layout_width="400dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="3dp"
-                android:text="Email: tommasoLorito@gmail.com"
+                android:text="Email: vincenzoConsoli@gmail.com"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -117,7 +117,7 @@
                 android:layout_width="212dp"
                 android:layout_height="42dp"
                 android:layout_marginLeft="3dp"
-                android:text="Ruolo: Caposquadra"
+                android:text="Ruolo: Operaio"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
@@ -144,7 +144,11 @@
                 app:srcCompat="@drawable/itinerario1" />
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Area_di_progetto"
         tools:targetApi="31">
         <activity
+            android:name=".Dipendente3"
+            android:exported="false" />
+        <activity
+            android:name=".dipendente2"
+            android:exported="false" />
+        <activity
+            android:name=".ChiSiamo"
+            android:exported="false" />
+        <activity
             android:name=".Dipendente1"
             android:exported="false" />
         <activity

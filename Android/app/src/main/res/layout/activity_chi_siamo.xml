@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChiSiamo">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="413dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="776dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="142dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
+    <ImageButton
+        android:id="@+id/back4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <LinearLayout
+        android:layout_width="421dp"
+        android:layout_height="825dp"
+        android:layout_marginStart="-5dp"
+        android:background="@drawable/sfondo1"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="-5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="421dp"
+            android:layout_height="237dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Nel contesto attuale, profondamente influenzato dalla trasformazione digitale e dalla crescente esigenza di snellire i processi aziendali, emerge la necessità di adottare strumenti flessibili e intelligenti che permettano alle imprese di gestire in maniera più efficiente ed efficace le proprie risorse umane. Da questo scenario nasce BeefficientHR, una piattaforma web di gestione HR progettata per rispondere in modo puntuale e innovativo ai bisogni di organizzazioni di piccole e medie dimensioni."
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            app:srcCompat="@drawable/foto" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="421dp"
+            android:layout_height="231dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="BeefficientHR è una web application sviluppata per facilitare tutte le attività connesse all’amministrazione del personale, offrendo un sistema centralizzato ma al tempo stesso modulare e personalizzabile. L’intero sistema è concepito per essere utilizzato in modalità multi-azienda, permettendo a più organizzazioni di accedere alla stessa piattaforma in modo completamente separato e sicuro, grazie a un avanzato sistema di credenziali."
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
