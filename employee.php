@@ -8,7 +8,7 @@
     <body>
         <?php
             session_start();
-
+            /*
             if (isset($_POST['codFiscale'])) {
                 $_SESSION['codFiscale'] = $_POST['codFiscale'];
             }
@@ -17,7 +17,7 @@
                 echo "<h1>" . $_SESSION['codFiscale']."<h1";
             } else {
                 echo "Nessun dipendente trovato nella sessione.";
-            }
+            }*/
         ?>
     </body>
 </html>

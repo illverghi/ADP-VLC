@@ -8,8 +8,8 @@
     <?php
         include_once "db.php";
         session_start();
-        if (isset($_SESSION["companyID"])) {
-            echo "<script>alert('Registrazione completata! Codice azienda: " . $_SESSION["companyID"] . "');</script>";
+        if (isset($_GET["companyID"])) {
+            echo "<script>alert('Registrazione completata! Codice azienda: " . $_GET["companyID"] . "');</script>";
         }
     ?>
 

@@ -39,7 +39,7 @@ if ($dbConn) {
             $_SESSION["ownerID"] = $row["ownerID"];
 
             // Ridireziono l'utente verso questa pagina.
-            header("Location: private.php");        
+            header("Location: private.php?companyID=$companyID");        
     }
     else {
         echo "Errore nella query: " . mysqli_error($dbConn);
