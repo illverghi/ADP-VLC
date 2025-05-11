@@ -39,7 +39,7 @@
             if ($dbConn) {
             
                 // La query da eseguire
-                $querySql = "SELECT nome, cognome FROM dipendenti WHERE codFiscale = '" . $codFiscale . "'";
+                $querySql = "SELECT * FROM dipendenti WHERE codFiscale = '" . $codFiscale . "'";
             
                 // Eseguo la query
                 $queryRes = mysqli_query($dbConn, $querySql);
@@ -53,6 +53,10 @@
                         // Memorizzo i dati nelle variabili di sessione.
                         $_SESSION["nome"] = $row["nome"];
                         $_SESSION["cognome"] = $row["cognome"];
+                        $_SESSION["nascita"] = $row["nascita"];
+                        $_SESSION["assunzione"] = $row["assunzione"];
+                        $_SESSION["codAzienda"] = $row["codAzienda"];
+                        echo "<div id='headerEmployee'>";
                         echo "<div id='employee-name'>{$_SESSION['nome']} {$_SESSION['cognome']}</div>";
                     }
                 }
@@ -67,8 +71,36 @@
                 echo "Errore nella connessione al DB.";
             }
         ?>
+        <div id=containerLogo>
+            <img src="/ADP-VLC/style/drawable/logoBeeEfficient(1).png" alt="Logo" width="auto" height="150">
+        </div>
         <div id="employee-icon">
             <img src="/ADP-VLC/style/drawable/bee_worker(2).png" alt="beeWorker" width="200" height="200">
+        </div>
+        <?php
+        echo "</div>";// Chiusura del div headerEmployee
+        ?>
+        <div id="employeeInfo">
+            <div id="employeeInfo-item">
+                <div id="employeeInfo-title">Codice Fiscale</div>
+                <div id="employeeInfo-value"><?php echo $_SESSION["codFiscale"] ?></div>
+            </div>
+            <div id="employeeInfo-item">
+                <div id="employeeInfo-title">Nascita</div>
+                <div id="employeeInfo-value"><?php echo $_SESSION["nascita"] ?></div>
+            </div>
+            <div id="employeeInfo-item">
+                <div id="employeeInfo-title">Assunzione</div>
+                <div id="employeeInfo-value"><?php echo $_SESSION["assunzione"] ?></div>
+            </div>
+            <div id="employeeInfo-item">
+                <div id="employeeInfo-title">Codice Azienda</div>
+                <div id="employeeInfo-value"><?php echo $_SESSION["codAzienda"] ?></div>
+            </div>
+            <div id="employeeInfo-item">
+                <div id="employeeInfo-title">Giorni Lavorativi</div>
+                <div id="employeeInfo-value"><?php  ?></div>
+            </div>
         </div>
     </body>
 </html>
