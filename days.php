@@ -85,6 +85,7 @@
                     <th>Giorno</th>
                     <th>Ore Lavorate</th>
                     <th>Feriale?</th>
+                    <th>Gestione</th>
                 </tr>
             </thead>
             <tbody>
@@ -125,6 +126,10 @@
                                                     $feriale = "Non Feriale";
                                                 }
                                                 echo "<td>" . htmlspecialchars($feriale) . "</td>";
+                                                echo "<td><form method='post' action='remove-day-action.php' style='margin:0;'>
+                                                        <input type='hidden' name='giorno' value='" . htmlspecialchars($row['giorno'], ENT_QUOTES, 'UTF-8') . "'>
+                                                        <button id='submitButton' type='submit'>Rimuovi</button>
+                                                    </form></td>";
                                                 echo "</tr>";
                                             }
                                         }

@@ -106,6 +106,14 @@
                     <div class="employeeInfo-value">Clicca qui per modificare le giornate della tua ape!</div>
                 </button>
             </form>
+            <form action="fire-action.php" method="post">
+                <input type="hidden" name="codFiscale" value="<?php echo $_SESSION['codFiscale']; ?>">
+                <input type="hidden" name="codAzienda" value="<?php echo $_SESSION['codAzienda']; ?>">
+                <button type="submit" id="submitButton">
+                    <div class="employeeInfo-title">Licenzia</div>
+                    <div class="employeeInfo-value">Clicca qui per lasciar libera la tua ape!</div>
+                </button>
+            </form>
         </div>
     </body>
 </html>

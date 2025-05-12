@@ -119,3 +119,21 @@ a{
 #daysTable tr:hover {
     background-color: rgba(128, 128, 128, 0.2);
 }
+
+#submitButton {
+    background-color: rgb(189, 85, 6);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: rgb(242, 149, 12);
+    color: black;
+}
