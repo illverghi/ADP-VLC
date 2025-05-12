@@ -5,12 +5,12 @@ html, body {
     height: 100vh;
     background-image: url("drawable/background_Employee.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     font-family: 'Nunito', sans-serif;
 }
 a{
     text-decoration: none;
+    color: black;
 }
 #toolbar {
     position: fixed;
@@ -126,4 +126,28 @@ a{
     font-family: 'Nunito', sans-serif;
     color: rgb(242, 149, 12);
     margin-bottom: 5px;
+}
+#submitButton {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: rgb(189, 85, 6);
+    border: none;
+    cursor: pointer;
+}
+#submitButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(242, 149, 12);
 }

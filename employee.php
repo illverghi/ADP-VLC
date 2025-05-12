@@ -2,6 +2,8 @@
 <?php
     include_once "db.php";
     session_start();
+    $codFiscale = $_SESSION['codFiscale'] ?? '';
+    // Verifica se il codice fiscale è stato passato tramite POST
     if (isset($_POST['codFiscale'])) {
         $_SESSION['codFiscale'] = $_POST['codFiscale'];
         $codFiscale = $_SESSION['codFiscale'];
@@ -21,7 +23,7 @@
                     <img src="/ADP-VLC/style/drawable/logoBeeEfficient(2).png" alt="Logo" width="80" height="30">
                 </div>
                 |
-                <a href="">
+                <a href="infoPage.php">
                     <div class="toolbar-item">
                         Chi Siamo?
                     </div>
@@ -71,7 +73,7 @@
                 echo "Errore nella connessione al DB.";
             }
         ?>
-        <div id=containerLogo>
+        <div id="containerLogo">
             <img src="/ADP-VLC/style/drawable/logoBeeEfficient(1).png" alt="Logo" width="auto" height="150">
         </div>
         <div id="employee-icon">
@@ -82,25 +84,28 @@
         ?>
         <div id="employeeInfo">
             <div id="employeeInfo-item">
-                <div id="employeeInfo-title">Codice Fiscale</div>
-                <div id="employeeInfo-value"><?php echo $_SESSION["codFiscale"] ?></div>
+                <div class="employeeInfo-title">Codice Fiscale</div>
+                <div class="employeeInfo-value"><?php echo $_SESSION["codFiscale"] ?></div>
             </div>
             <div id="employeeInfo-item">
-                <div id="employeeInfo-title">Nascita</div>
-                <div id="employeeInfo-value"><?php echo $_SESSION["nascita"] ?></div>
+                <div class="employeeInfo-title">Nascita</div>
+                <div class="employeeInfo-value"><?php echo $_SESSION["nascita"] ?></div>
             </div>
             <div id="employeeInfo-item">
-                <div id="employeeInfo-title">Assunzione</div>
-                <div id="employeeInfo-value"><?php echo $_SESSION["assunzione"] ?></div>
+                <div class="employeeInfo-title">Assunzione</div>
+                <div class="employeeInfo-value"><?php echo $_SESSION["assunzione"] ?></div>
             </div>
             <div id="employeeInfo-item">
-                <div id="employeeInfo-title">Codice Azienda</div>
-                <div id="employeeInfo-value"><?php echo $_SESSION["codAzienda"] ?></div>
+                <div class="employeeInfo-title">Codice Azienda</div>
+                <div class="employeeInfo-value"><?php echo $_SESSION["codAzienda"] ?></div>
             </div>
-            <div id="employeeInfo-item">
-                <div id="employeeInfo-title">Giorni Lavorativi</div>
-                <div id="employeeInfo-value"><?php  ?></div>
-            </div>
+            <form action="days.php" method="post">
+                <input type="hidden" name="codFiscale" value="<?php echo $_SESSION['codFiscale']; ?>">
+                <button type="submit" id="submitButton">
+                    <div class="employeeInfo-title">Giorni Lavorativi</div>
+                    <div class="employeeInfo-value">Clicca qui per modificare le giornate della tua ape!</div>
+                </button>
+            </form>
         </div>
     </body>
 </html>

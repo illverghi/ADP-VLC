@@ -32,12 +32,17 @@
                 </div>
             </a>
             |
-            <a href="">
+            <a href="infoPage.php">
                 <div class="toolbar-item">
                     Chi Siamo?
                 </div>
             </a>
-            
+            |
+            <a href="private.php">
+                <div class="toolbar-arrow">
+                    <img src="/ADP-VLC/style/drawable/bee-backArrow.png" alt="Arrow" width="40" height="40">
+                </div>
+            </a>
             
         </div>
     </header>

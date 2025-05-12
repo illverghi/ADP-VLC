@@ -4,10 +4,10 @@ html, body {
     width: 100%;
     height: 100vh;
     background-image: url("drawable/background_Login(1).png");
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
 }
 #containerLogo {
     position: absolute;

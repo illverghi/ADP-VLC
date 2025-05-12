@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("drawable/background_Login.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+#toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    flex-direction: row;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    color: white;
+}
+#toolbar-logo {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+}
+.toolbar-item {
+    margin: 15px;
+    color: rgb(189, 85, 6);
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+.toolbar-item:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(242, 149, 12);
+    padding: 5px 10px;
+}
+#containerPresentazione{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+}
+#slogan{
+    margin-top: 20px;
+    font-weight: bolder;
+}

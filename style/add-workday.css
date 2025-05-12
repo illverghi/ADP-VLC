@@ -8,7 +8,6 @@ html, body {
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 #containerLogo {
     position: absolute;
@@ -16,7 +15,7 @@ html, body {
     left: 0;
     padding: 10px;
 }
-#containerLogin {
+#containerWorkday {
     padding-top: 15px;
     width: 300px;
     margin: 200px auto;
@@ -31,23 +30,15 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-
 label {
     font-weight: bold;
     color: rgb(242, 149, 12);
 }
-
-input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid rgb(242, 149, 12);
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: rgb(189, 85, 6);
+.confirm-button {
+    display: inline-block;
+    text-decoration: none;
 }
-
-input[type="submit"], .register-button {
+input[type="submit"], .confirm-button {
     background-color: rgb(242, 149, 12);
     color: white;
     border: none;
@@ -59,24 +50,7 @@ input[type="submit"], .register-button {
     flex: 1;
     margin: 0 5px;
 }
-
-
-.register-button {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.submit-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-input[type="submit"]:hover, .register-button:hover {
+input[type="submit"]:hover, .confirm-button:hover {
     background-color: rgb(189, 85, 6);
     color: #fff;
-}
-#togglePassword {
-    transition: 0.3s ease;
-    user-select: none;
 }
